@@ -1,0 +1,115 @@
+package org.isep;
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.function.BiFunction;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+
+public class Main {
+
+    private static int BATCH_SIZE = 10;
+
+
+
+    public static void loadFile(String path, List<String> data) {
+        System.out.println("Loading: " + path);
+
+        if(path.length() <= 1) return;
+        try {
+            List<String> lines  = Files.readAllLines(new File(path).toPath());
+            data.addAll(lines);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    public static <K,V,D> List<DataPair<K,V>> map(Function<D,List<DataPair<K,V>>> mapper, List<D> input) {
+        return input.stream()
+                .flatMap(d -> mapper.apply(d).stream())
+                .collect(Collectors.toList());
+    }
+
+
+    public static <K,V> Map<K,List<V>> shuffle(List<DataPair<K, V>> r) {
+        Map<K, List<V>> m = new HashMap<>();
+
+        for(DataPair<K, V> p: r) {
+            List<V> l = m.getOrDefault(p.key, new ArrayList<V>());
+            l.add(p.value);
+            m.put(p.key, l);
+        }
+
+        return m;
+    }
+
+
+    public static <k,outv,inv>
+                List<DataPair<k,outv>>
+                reduce(BiFunction<outv,inv,outv> reducer, outv identity, Map<k,List<inv>> data) {
+
+        return data.entrySet().stream()
+                .map(e -> {
+                        outv result =identity;
+                        for(inv i: e.getValue()) {
+                            result = reducer.apply(result,i);
+                        }
+                     return new DataPair<>(e.getKey(), result);
+                        }).collect(Collectors.toList());
+
+    }
+
+    public static void main(String[] args) {
+
+        if(args.length < 1) {
+            System.out.println("USAGE: java Main index.txt");
+            System.exit(0);
+        }
+
+        List<String> flist = new ArrayList<>();
+        loadFile(args[0], flist);
+
+
+        List<String> data = new ArrayList<>();
+
+
+        // Loading data
+        for(String p: flist) {
+            loadFile(p,data);
+        }
+
+
+        Function<String, List<DataPair<String,Integer>>> mapper = (String s) -> {
+          String [] d = s.split("\\W");
+          List<DataPair<String,Integer>> res = new ArrayList<>();
+          for(String w:d) res.add(new DataPair<>(w.toUpperCase(),1));
+          return res;
+        };
+
+        // MAP PHASE
+        List<DataPair<String,Integer>> r = map(mapper,data);
+        // SHUFFLE PHASE
+        Map<String, List<Integer>> shuffled = shuffle(r);
+
+
+        //REDUCE PHASE
+        List<DataPair<String,Integer>> result = reduce((Integer a, Integer b) -> (a+b) ,
+                                                        0,
+                                                            shuffled);
+
+        //printing results
+        result.forEach(d -> System.out.println(d.key +";" + d.value));
+
+
+
+        }
+
+
+
+}

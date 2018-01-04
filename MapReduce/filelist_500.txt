@@ -1,0 +1,500 @@
+./MapReduce/Gutenberg/txt/Sir Arthur Conan Doyle___My Friend The Murderer.txt
+./MapReduce/Gutenberg/txt/James Russell Lowell___Among My Books, First Series.txt
+./MapReduce/Gutenberg/txt/Grant Allen___Falling in Love.txt
+./MapReduce/Gutenberg/txt/D H Lawrence___The Rainbow.txt
+./MapReduce/Gutenberg/txt/R M Ballantyne___Under the Waves.txt
+./MapReduce/Gutenberg/txt/Edgar Rice Burroughs___A Princess of Mars.txt
+./MapReduce/Gutenberg/txt/Henry James___The Bostonians, Volume 2.txt
+./MapReduce/Gutenberg/txt/Lord Byron___The Works of Lord Byron. Vol. 3.txt
+./MapReduce/Gutenberg/txt/Bret Harte___Tennessee's Partner.txt
+./MapReduce/Gutenberg/txt/Henry Rider Haggard___Allan and the Holy Flower.txt
+./MapReduce/Gutenberg/txt/Henry Rider Haggard___Pearl-Maiden.txt
+./MapReduce/Gutenberg/txt/Sir Arthur Conan Doyle___The Valley of Fear.txt
+./MapReduce/Gutenberg/txt/Anthony Trollope___The Man Who Kept His Money In A Box.txt
+./MapReduce/Gutenberg/txt/Elizabeth Barrett Browning___Sonnets from the Portuguese.txt
+./MapReduce/Gutenberg/txt/Herman Melville___Typee.txt
+./MapReduce/Gutenberg/txt/George Bernard Shaw___A Treatise on Parents and Children.txt
+./MapReduce/Gutenberg/txt/Baronness Orczy___The Heart of a Woman.txt
+./MapReduce/Gutenberg/txt/Charles Dickens___Tom Tiddler's Ground.txt
+./MapReduce/Gutenberg/txt/Jerome Klapka Jerome___Told After Supper.txt
+./MapReduce/Gutenberg/txt/Joseph Conrad___Nostromo, A Tale of the Seaboard.txt
+./MapReduce/Gutenberg/txt/William Wordsworth___Poems in Two Volumes, Volume 1.txt
+./MapReduce/Gutenberg/txt/Henry Rider Haggard___Eric Brighteyes.txt
+./MapReduce/Gutenberg/txt/James Fenimore Cooper___Oak Openings.txt
+./MapReduce/Gutenberg/txt/R M Ballantyne___The Giant of the North.txt
+./MapReduce/Gutenberg/txt/George Eliot___Brother Jacob.txt
+./MapReduce/Gutenberg/txt/Jane Austen___Mansfield Park.txt
+./MapReduce/Gutenberg/txt/Elizabeth Barrett Browning___The Poetical Works of Elizabeth Barrett Browning Volume II.txt
+./MapReduce/Gutenberg/txt/George Alfred Henty___Friends, though divided.txt
+./MapReduce/Gutenberg/txt/Jacob Abbott___Stuyvesant.txt
+./MapReduce/Gutenberg/txt/William Butler Yeats___The Land Of Heart's Desire.txt
+./MapReduce/Gutenberg/txt/William Makepeace Thackeray___John Leech's Pictures of Life and Character.txt
+./MapReduce/Gutenberg/txt/Henry James___A  Passionate Pilgrim.txt
+./MapReduce/Gutenberg/txt/Andrew Lang___The Brown Fairy Book.txt
+./MapReduce/Gutenberg/txt/P G Wodehouse___The Little Nugget.txt
+./MapReduce/Gutenberg/txt/R M Ballantyne___The Madman and the Pirate.txt
+./MapReduce/Gutenberg/txt/Emily Bronte___Wuthering Heights.txt
+./MapReduce/Gutenberg/txt/George Eliot___How Lisa Loved the King.txt
+./MapReduce/Gutenberg/txt/James Otis___Defending the Island.txt
+./MapReduce/Gutenberg/txt/Rudyard Kipling___Letters of Travel (1892-1913).txt
+./MapReduce/Gutenberg/txt/P G Wodehouse___Something New.txt
+./MapReduce/Gutenberg/txt/Charles Dickens___Great Expectations.txt
+./MapReduce/Gutenberg/txt/James Otis___Richard of Jamestown.txt
+./MapReduce/Gutenberg/txt/Henry James___Confidence.txt
+./MapReduce/Gutenberg/txt/Sir Walter Scott___The Antiquary, Complete.txt
+./MapReduce/Gutenberg/txt/Robert Southey___Poems.txt
+./MapReduce/Gutenberg/txt/John Stuart Mill___Utilitarianism.txt
+./MapReduce/Gutenberg/txt/Nathaniel Hawthorne___Buds and Bird Voices (From "Mosses From An Old Manse").txt
+./MapReduce/Gutenberg/txt/Nathaniel Hawthorne___The Marble Faun, Volume 2.txt
+./MapReduce/Gutenberg/txt/James Otis___Down the Slope.txt
+./MapReduce/Gutenberg/txt/Henry James___The Awkward Age.txt
+./MapReduce/Gutenberg/txt/Wilkie Collins___The Two Destinies.txt
+./MapReduce/Gutenberg/txt/Lewis Carroll___The Game of Logic.txt
+./MapReduce/Gutenberg/txt/G K Chesterton___Varied Types.txt
+./MapReduce/Gutenberg/txt/John Morley___Diderot and the Encyclopædists (Vol 1 of 2).txt
+./MapReduce/Gutenberg/txt/George Alfred Henty___Dorothy's Double, Volume 3.txt
+./MapReduce/Gutenberg/txt/Charles Darwin___The Descent of Man and Selection in Relation to Sex.txt
+./MapReduce/Gutenberg/txt/William Wymark Jacobs___In The Library, The Lady of the Barge and Others, Part 6.txt
+./MapReduce/Gutenberg/txt/Nathaniel Hawthorne___Mosses from an Old Manse and Other Stories.txt
+./MapReduce/Gutenberg/txt/Jerome Klapka Jerome___The Master of Mrs. Chilvers.txt
+./MapReduce/Gutenberg/txt/John Maynard Keynes___The Economic Consequences of the Peace.txt
+./MapReduce/Gutenberg/txt/Grant Allen___Charles Darwin.txt
+./MapReduce/Gutenberg/txt/Herman Melville___Omoo: Adventures in the South Seas.txt
+./MapReduce/Gutenberg/txt/Jack London___Children of the Frost.txt
+./MapReduce/Gutenberg/txt/John Dryden___The Poetical Works of John Dryden, Volume 1.txt
+./MapReduce/Gutenberg/txt/William Dean Howells___Oliver Wendell Holmes.txt
+./MapReduce/Gutenberg/txt/Elizabeth Barrett Browning___The Letters of Elizabeth Barrett Browning (1 of 2).txt
+./MapReduce/Gutenberg/txt/Oscar Wilde___An Ideal Husband.txt
+./MapReduce/Gutenberg/txt/Charlotte Mary Yonge___The Pigeon Pie.txt
+./MapReduce/Gutenberg/txt/Elizabeth Barrett Browning___The Poetical Works of Elizabeth Barrett Browning Volume IV.txt
+./MapReduce/Gutenberg/txt/Mark Twain___Those Extraordinary Twins.txt
+./MapReduce/Gutenberg/txt/Rafael Sabatini___Love-at-Arms.txt
+./MapReduce/Gutenberg/txt/Andrew Lang___A Collection of Ballads.txt
+./MapReduce/Gutenberg/txt/James Fenimore Cooper___New York.txt
+./MapReduce/Gutenberg/txt/William Dean Howells___The Man of Letters as a Man of Business.txt
+./MapReduce/Gutenberg/txt/Benjamin Disraeli___Sybil.txt
+./MapReduce/Gutenberg/txt/Charles Dickens___The Lazy Tour of Two Idle Apprentices.txt
+./MapReduce/Gutenberg/txt/Edmund Burke___The Works of the Right Honourable Edmund Burke, Vol. 01 (of 12).txt
+./MapReduce/Gutenberg/txt/George Alfred Henty___On the Irrawaddy.txt
+./MapReduce/Gutenberg/txt/John Galsworthy___The Complete Essays of John Galsworthy.txt
+./MapReduce/Gutenberg/txt/Philip Kindred Dick___The Eyes Have It.txt
+./MapReduce/Gutenberg/txt/Bret Harte___By Shore and Sedge.txt
+./MapReduce/Gutenberg/txt/Frank Richard Stockton___Kate Bonnet.txt
+./MapReduce/Gutenberg/txt/Rudyard Kipling___Rewards and Fairies.txt
+./MapReduce/Gutenberg/txt/Thomas Carlyle___Sartor Resartus.txt
+./MapReduce/Gutenberg/txt/Nathaniel Hawthorne___The Scarlet Letter.txt
+./MapReduce/Gutenberg/txt/Anthony Trollope___Lady Anna.txt
+./MapReduce/Gutenberg/txt/William Dean Howells___My Literary Passions.txt
+./MapReduce/Gutenberg/txt/Aldous Huxley___Mortal Coils.txt
+./MapReduce/Gutenberg/txt/Thornton Waldo Burgess___The Adventures of Danny Meadow Mouse.txt
+./MapReduce/Gutenberg/txt/George Alfred Henty___Jack Archer.txt
+./MapReduce/Gutenberg/txt/William Wymark Jacobs___Friends In Need, Ship's Company, Part 2.txt
+./MapReduce/Gutenberg/txt/Charles Darwin___The Autobiography of Charles Darwin.txt
+./MapReduce/Gutenberg/txt/Hector Hugh Munro___When William Came.txt
+./MapReduce/Gutenberg/txt/Charles Dickens___George Silverman's Explanation.txt
+./MapReduce/Gutenberg/txt/R M Ballantyne___Away in the Wilderness.txt
+./MapReduce/Gutenberg/txt/Jack London___Martin Eden.txt
+./MapReduce/Gutenberg/txt/Grant Allen___Recalled to Life.txt
+./MapReduce/Gutenberg/txt/John Morley___Critical Miscellanies, Volume 1, Essay 3, Byron.txt
+./MapReduce/Gutenberg/txt/Frank Richard Stockton___What Might Have Been Expected.txt
+./MapReduce/Gutenberg/txt/Henry James___The Point of View.txt
+./MapReduce/Gutenberg/txt/Andrew Lang___The Orange Fairy Book.txt
+./MapReduce/Gutenberg/txt/James Otis___The Club at Crow's Corner.txt
+./MapReduce/Gutenberg/txt/Mary Shelley___The Last Man.txt
+./MapReduce/Gutenberg/txt/George Bernard Shaw___Augustus Does His Bit.txt
+./MapReduce/Gutenberg/txt/John Ruskin___The Elements of Drawing.txt
+./MapReduce/Gutenberg/txt/John Ruskin___Modern Painters, Volume 2 (of 5).txt
+./MapReduce/Gutenberg/txt/John Stuart Mill___Socialism.txt
+./MapReduce/Gutenberg/txt/Thomas Carlyle___History of Friedrich II of Prussia, Volume 10.txt
+./MapReduce/Gutenberg/txt/Rudyard Kipling___Plain Tales from the Hills.txt
+./MapReduce/Gutenberg/txt/Robert Louis Stevenson___Tales and Fantasies.txt
+./MapReduce/Gutenberg/txt/Lewis Carroll___Alice's Adventures Under Ground.txt
+./MapReduce/Gutenberg/txt/George Bernard Shaw___Fanny's First Play.txt
+./MapReduce/Gutenberg/txt/Robert Louis Stevenson___A Child's Garden of Verses, Verse 142.txt
+./MapReduce/Gutenberg/txt/William Henry Hudson___Far Away and Long Ago.txt
+./MapReduce/Gutenberg/txt/Edward Stratemeyer___First at the North Pole.txt
+./MapReduce/Gutenberg/txt/George Alfred Henty___Dorothy's Double, Volume 1.txt
+./MapReduce/Gutenberg/txt/John Dryden___Dryden's Works Vol. 7 (of 18).txt
+./MapReduce/Gutenberg/txt/Jack London___Theft.txt
+./MapReduce/Gutenberg/txt/Louisa May Alcott___The Mysterious Key And What It Opened.txt
+./MapReduce/Gutenberg/txt/William Wymark Jacobs___A Tiger's Skin, The Lady of the Barge and Others, Part 8.txt
+./MapReduce/Gutenberg/txt/Edward Stratemeyer___Three Young Ranchmen.txt
+./MapReduce/Gutenberg/txt/Thomas Hardy___Life's Little Ironies.txt
+./MapReduce/Gutenberg/txt/Mark Twain___Editorial Wild Oats.txt
+./MapReduce/Gutenberg/txt/Rafael Sabatini___The Tavern Knight.txt
+./MapReduce/Gutenberg/txt/William Butler Yeats___Responsibilities.txt
+./MapReduce/Gutenberg/txt/George Alfred Henty___At Agincourt.txt
+./MapReduce/Gutenberg/txt/Charles Darwin___The Movements and Habits of Climbing Plants.txt
+./MapReduce/Gutenberg/txt/Charles Dickens___Dombey and Son.txt
+./MapReduce/Gutenberg/txt/James Matthew Barrie___Quality Street.txt
+./MapReduce/Gutenberg/txt/George Bernard Shaw___Overruled.txt
+./MapReduce/Gutenberg/txt/Edward Stratemeyer___Dave Porter on Cave Island.txt
+./MapReduce/Gutenberg/txt/Jacob Abbott___History of Julius Caesar.txt
+./MapReduce/Gutenberg/txt/Lord Tennyson___The Early Poems of Alfred Lord Tennyson.txt
+./MapReduce/Gutenberg/txt/Benjamin Franklin___Autobiography of Benjamin Franklin, Version 2.txt
+./MapReduce/Gutenberg/txt/Benjamin Disraeli___Ixion In Heaven.txt
+./MapReduce/Gutenberg/txt/Lyman Frank Baum___Twinkle and Chubbins.txt
+./MapReduce/Gutenberg/txt/R M Ballantyne___The Battle and the Breeze.txt
+./MapReduce/Gutenberg/txt/Thomas Carlyle___History of Friedrich II of Prussia, Volume 4.txt
+./MapReduce/Gutenberg/txt/Zane Grey___The Light of Western Stars.txt
+./MapReduce/Gutenberg/txt/Anthony Trollope___Life of Cicero Volume Two.txt
+./MapReduce/Gutenberg/txt/Benjamin Disraeli___Alroy.txt
+./MapReduce/Gutenberg/txt/Edward Stratemeyer___Out with Gun and Camera.txt
+./MapReduce/Gutenberg/txt/Charlotte Mary Yonge___The Dove in the Eagle's Nest.txt
+./MapReduce/Gutenberg/txt/Jerome Klapka Jerome___Idle Ideas in 1905.txt
+./MapReduce/Gutenberg/txt/Henry James___The Beldonald Holbein.txt
+./MapReduce/Gutenberg/txt/Anthony Trollope___The Claverings.txt
+./MapReduce/Gutenberg/txt/R M Ballantyne___Freaks on the Fells.txt
+./MapReduce/Gutenberg/txt/Thomas Hardy___Tess of the d'Urbervilles.txt
+./MapReduce/Gutenberg/txt/Nathaniel Hawthorne___Other Tales and Sketches.txt
+./MapReduce/Gutenberg/txt/Edward Phillips Oppenheim___The Moving Finger.txt
+./MapReduce/Gutenberg/txt/Thomas Hardy___Late Lyrics and Earlier.txt
+./MapReduce/Gutenberg/txt/Charles Kingsley___Plays and Puritans.txt
+./MapReduce/Gutenberg/txt/Percival Lowell___The Soul of the Far East.txt
+./MapReduce/Gutenberg/txt/Anthony Trollope___An Old Man's Love.txt
+./MapReduce/Gutenberg/txt/Ambrose Bierce___The Shadow On The Dial, and Other Essays.txt
+./MapReduce/Gutenberg/txt/Rudyard Kipling___The Works of Rudyard Kipling One Volume Edition.txt
+./MapReduce/Gutenberg/txt/Bret Harte___In the Carquinez Woods.txt
+./MapReduce/Gutenberg/txt/Beatrix Potter___The Tale of Mrs. Tiggy-Winkle.txt
+./MapReduce/Gutenberg/txt/Anthony Trollope___Orley Farm.txt
+./MapReduce/Gutenberg/txt/Sir Arthur Conan Doyle___Micah Clarke.txt
+./MapReduce/Gutenberg/txt/Lord Byron___The Works of Lord Byron. Vol. 7.txt
+./MapReduce/Gutenberg/txt/Mark Twain___The Prince and The Pauper, Complete.txt
+./MapReduce/Gutenberg/txt/John Galsworthy___Inn of Tranquility and Other Essays.txt
+./MapReduce/Gutenberg/txt/Harold Bindloss___Alton of Somasco.txt
+./MapReduce/Gutenberg/txt/Thomas Henry Huxley___On Some Fossil Remains of Man.txt
+./MapReduce/Gutenberg/txt/R M Ballantyne___The Walrus Hunters.txt
+./MapReduce/Gutenberg/txt/James Otis___Left Behind.txt
+./MapReduce/Gutenberg/txt/Robert Louis Stevenson___The Works of Robert Louis Stevenson - Swanston Edition, Volume 19.txt
+./MapReduce/Gutenberg/txt/Henry James___The Portrait of a Lady, Volume 1.txt
+./MapReduce/Gutenberg/txt/Rafael Sabatini___The Snare.txt
+./MapReduce/Gutenberg/txt/William Dean Howells___The Standard Household-Effect Company.txt
+./MapReduce/Gutenberg/txt/Jack London___The Sea-Wolf.txt
+./MapReduce/Gutenberg/txt/Edward Stratemeyer___The Last Cruise of the Spitfire.txt
+./MapReduce/Gutenberg/txt/Beatrix Potter___A Collection of Beatrix Potter Stories.txt
+./MapReduce/Gutenberg/txt/William Butler Yeats___The Trembling of the Veil.txt
+./MapReduce/Gutenberg/txt/Bret Harte___In a Hollow of the Hills.txt
+./MapReduce/Gutenberg/txt/Henry Rider Haggard___Morning Star.txt
+./MapReduce/Gutenberg/txt/George Alfred Henty___In Times of Peril.txt
+./MapReduce/Gutenberg/txt/Agatha Christie___The Mysterious Affair at Styles.txt
+./MapReduce/Gutenberg/txt/Baronness Orczy___El Dorado.txt
+./MapReduce/Gutenberg/txt/Sir Arthur Conan Doyle___Beyond the City.txt
+./MapReduce/Gutenberg/txt/Herbert George Wells___New Worlds For Old.txt
+./MapReduce/Gutenberg/txt/William Dean Howells___Questionable Shapes.txt
+./MapReduce/Gutenberg/txt/Charles Dickens___Miscellaneous Papers.txt
+./MapReduce/Gutenberg/txt/Edward Phillips Oppenheim___Peter Ruff and the Double Four.txt
+./MapReduce/Gutenberg/txt/Lyman Frank Baum___Little Wizard Stories of Oz.txt
+./MapReduce/Gutenberg/txt/James Otis___The Boys of ’98.txt
+./MapReduce/Gutenberg/txt/Oscar Wilde___The Picture of Dorian Gray.txt
+./MapReduce/Gutenberg/txt/Jonathan Swift___The Prose Works of Jonathan Swift, D.D., Volume 9.txt
+./MapReduce/Gutenberg/txt/Baronness Orczy___"Unto Caesar".txt
+./MapReduce/Gutenberg/txt/Harold Bindloss___Delilah of the Snows.txt
+./MapReduce/Gutenberg/txt/D H Lawrence___Amores.txt
+./MapReduce/Gutenberg/txt/R M Ballantyne___Personal Reminiscences in Book Making.txt
+./MapReduce/Gutenberg/txt/P B Shelley___A Vindication of Natural Diet.txt
+./MapReduce/Gutenberg/txt/P G Wodehouse___Indiscretions of Archie.txt
+./MapReduce/Gutenberg/txt/Sir Arthur Conan Doyle___The Adventures of Sherlock Holmes.txt
+./MapReduce/Gutenberg/txt/William Butler Yeats___Synge And The Ireland Of His Time.txt
+./MapReduce/Gutenberg/txt/Thomas Henry Huxley___The Past Condition of Organic Nature.txt
+./MapReduce/Gutenberg/txt/Walt Whitman___Drum Taps.txt
+./MapReduce/Gutenberg/txt/Henry James___The Madonna of the Future.txt
+./MapReduce/Gutenberg/txt/Thomas Henry Huxley___Evidence as to Man's Place in Nature.txt
+./MapReduce/Gutenberg/txt/Bret Harte___A Drift from Redwood Camp.txt
+./MapReduce/Gutenberg/txt/Thomas Carlyle___History of Friedrich II of Prussia, Volume 8.txt
+./MapReduce/Gutenberg/txt/William Dean Howells___Indian Summer.txt
+./MapReduce/Gutenberg/txt/William Wymark Jacobs___Easy Money, Night Watches, Part 9.txt
+./MapReduce/Gutenberg/txt/Sir Walter Scott___The Dramatic Works of John Dryden, Volume I.txt
+./MapReduce/Gutenberg/txt/William Dean Howells___My Mark Twain.txt
+./MapReduce/Gutenberg/txt/Zane Grey___Desert Gold.txt
+./MapReduce/Gutenberg/txt/Joseph Conrad___The Nigger Of The "Narcissus".txt
+./MapReduce/Gutenberg/txt/R M Ballantyne___The Island Queen.txt
+./MapReduce/Gutenberg/txt/Joseph Conrad___Tales of Unrest.txt
+./MapReduce/Gutenberg/txt/Anthony Trollope___The Fixed Period.txt
+./MapReduce/Gutenberg/txt/Winston Churchill___Dr. Jonathan (A Play).txt
+./MapReduce/Gutenberg/txt/James Fenimore Cooper___Ned Myers.txt
+./MapReduce/Gutenberg/txt/Samuel Taylor Coleridge___Coleridge's Literary Remains, Volume 1.txt
+./MapReduce/Gutenberg/txt/William J Long___Secret of the Woods.txt
+./MapReduce/Gutenberg/txt/Sir Arthur Conan Doyle___The Great Keinplatz Experiment and Other Tales of Twilight and the Unseen.txt
+./MapReduce/Gutenberg/txt/Harold Bindloss___Winston of the Prairie.txt
+./MapReduce/Gutenberg/txt/Thomas Hardy___The Woodlanders.txt
+./MapReduce/Gutenberg/txt/Sir Arthur Conan Doyle___The New Revelation.txt
+./MapReduce/Gutenberg/txt/Thomas Henry Huxley___Lay Sermons, Addresses and Reviews.txt
+./MapReduce/Gutenberg/txt/Robert Louis Stevenson___The Works of Robert Louis Stevenson - Swanston Edition, Volume 16.txt
+./MapReduce/Gutenberg/txt/Jerome Klapka Jerome___Evergreens.txt
+./MapReduce/Gutenberg/txt/Charlotte Mary Yonge___Lady Hester, or Ursula's Narrative.txt
+./MapReduce/Gutenberg/txt/William Wymark Jacobs___The Money Box, Odd Craft, Part 1.txt
+./MapReduce/Gutenberg/txt/Washington Irving___Astoria.txt
+./MapReduce/Gutenberg/txt/Edgar Rice Burroughs___Tarzan and the Jewels of Opar.txt
+./MapReduce/Gutenberg/txt/James Otis___On the Kentucky Frontier.txt
+./MapReduce/Gutenberg/txt/Sir Arthur Conan Doyle___The Mystery of Cloomber.txt
+./MapReduce/Gutenberg/txt/James Matthew Barrie___Alice Sit-By-The-Fire.txt
+./MapReduce/Gutenberg/txt/Herbert George Wells___A Short History of the World.txt
+./MapReduce/Gutenberg/txt/William Henry Hudson___A Little Boy Lost.txt
+./MapReduce/Gutenberg/txt/Joseph Conrad___The Secret Agent.txt
+./MapReduce/Gutenberg/txt/William Makepeace Thackeray___Men's Wives.txt
+./MapReduce/Gutenberg/txt/Edmund Burke___The Works of the Right Honourable Edmund Burke, Vol. 04 (of 12).txt
+./MapReduce/Gutenberg/txt/Jerome Klapka Jerome___Malvina of Brittany.txt
+./MapReduce/Gutenberg/txt/Winston Churchill___The Inside of the Cup, Complete.txt
+./MapReduce/Gutenberg/txt/Anthony Trollope___The Kellys and the O'Kellys.txt
+./MapReduce/Gutenberg/txt/Henry David Thoreau___A Plea for Captain John Brown.txt
+./MapReduce/Gutenberg/txt/Henry James___The Pension Beaurepas.txt
+./MapReduce/Gutenberg/txt/Jacob Abbott___Charles I.txt
+./MapReduce/Gutenberg/txt/John Galsworthy___To Let.txt
+./MapReduce/Gutenberg/txt/Herbert George Wells___The History of Mr. Polly.txt
+./MapReduce/Gutenberg/txt/James Otis___Under the Liberty Tree.txt
+./MapReduce/Gutenberg/txt/Stephen Leacock___The Dawn of Canadian History - A Chronicle of Aboriginal Canada.txt
+./MapReduce/Gutenberg/txt/Oscar Wilde___A Critic in Pall Mall.txt
+./MapReduce/Gutenberg/txt/Stephen Leacock___Moonbeams From the Larger Lunacy.txt
+./MapReduce/Gutenberg/txt/Anthony Trollope___The American Senator.txt
+./MapReduce/Gutenberg/txt/George Eliot___Impressions of Theophrastus Such.txt
+./MapReduce/Gutenberg/txt/John Ruskin___Unto This Last and Other Essays on Political Economy.txt
+./MapReduce/Gutenberg/txt/Andrew Lang___The Grey Fairy Book.txt
+./MapReduce/Gutenberg/txt/Henry Rider Haggard___Marie.txt
+./MapReduce/Gutenberg/txt/Jack London___South Sea Tales.txt
+./MapReduce/Gutenberg/txt/Andrew Lang___A Monk of Fife.txt
+./MapReduce/Gutenberg/txt/William Dean Howells___A Foregone Conclusion.txt
+./MapReduce/Gutenberg/txt/R M Ballantyne___Jeff Benson, or the Young Coastguardsman.txt
+./MapReduce/Gutenberg/txt/Lewis Carroll___Three Sunsets and Other Poems.txt
+./MapReduce/Gutenberg/txt/John Ruskin___The Ethics of the Dust.txt
+./MapReduce/Gutenberg/txt/Frank Richard Stockton___A Bicycle of Cathay.txt
+./MapReduce/Gutenberg/txt/Rudyard Kipling___From Sea to Sea.txt
+./MapReduce/Gutenberg/txt/Bret Harte___Jeff Briggs's Love Story.txt
+./MapReduce/Gutenberg/txt/Anthony Trollope___Ralph the Heir.txt
+./MapReduce/Gutenberg/txt/Washington Irving___Oliver Goldsmith.txt
+./MapReduce/Gutenberg/txt/William Dean Howells___A Likely Story.txt
+./MapReduce/Gutenberg/txt/Anthony Trollope___Nina Balatka.txt
+./MapReduce/Gutenberg/txt/Sir Walter Scott___Woodstock; or, The Cavalier.txt
+./MapReduce/Gutenberg/txt/Edmund Burke___The Works of the Right Honourable Edmund Burke, Vol. 09 (of 12).txt
+./MapReduce/Gutenberg/txt/Lyman Frank Baum___Dot and Tot of Merryland.txt
+./MapReduce/Gutenberg/txt/Sir Arthur Conan Doyle___The Tragedy of The Korosko.txt
+./MapReduce/Gutenberg/txt/George Alfred Henty___A Roving Commission.txt
+./MapReduce/Gutenberg/txt/Thornton Waldo Burgess___The Adventures of Johnny Chuck.txt
+./MapReduce/Gutenberg/txt/Sir Walter Scott___The Talisman.txt
+./MapReduce/Gutenberg/txt/Robert Louis Stevenson___The Master of Ballantrae.txt
+./MapReduce/Gutenberg/txt/Baronness Orczy___The Old Man in the Corner.txt
+./MapReduce/Gutenberg/txt/Bret Harte___Cressy.txt
+./MapReduce/Gutenberg/txt/George Alfred Henty___The Dragon and the Raven.txt
+./MapReduce/Gutenberg/txt/James Matthew Barrie___Auld Licht Idylls.txt
+./MapReduce/Gutenberg/txt/Nathaniel Hawthorne___Beneath an Umbrella (From "Twice Told Tales").txt
+./MapReduce/Gutenberg/txt/Nathaniel Hawthorne___The Hall of Fantasy (From "Mosses From An Old Manse").txt
+./MapReduce/Gutenberg/txt/Henry Rider Haggard___King Solomon's Mines.txt
+./MapReduce/Gutenberg/txt/Samuel Taylor Coleridge___Shakespeare, Ben Jonson, Beaumont and Fletcher.txt
+./MapReduce/Gutenberg/txt/Edgar Rice Burroughs___At the Earth's Core.txt
+./MapReduce/Gutenberg/txt/Lucy Maud Montgomery___Lucy Maud Montgomery Short Stories, 1907 to 1908.txt
+./MapReduce/Gutenberg/txt/Nathaniel Hawthorne___A Rill from the Town Pump (From "Twice Told Tales").txt
+./MapReduce/Gutenberg/txt/Joseph Conrad___The Shadow-Line.txt
+./MapReduce/Gutenberg/txt/Edward Phillips Oppenheim___The Kingdom of the Blind.txt
+./MapReduce/Gutenberg/txt/Sir Walter Scott___Quentin Durward.txt
+./MapReduce/Gutenberg/txt/Joseph Conrad___Typhoon.txt
+./MapReduce/Gutenberg/txt/Sir Arthur Conan Doyle___A Study In Scarlet.txt
+./MapReduce/Gutenberg/txt/Jack London___The Little Lady of the Big House.txt
+./MapReduce/Gutenberg/txt/George Bernard Shaw___The Doctor's Dilemma: Preface on Doctors.txt
+./MapReduce/Gutenberg/txt/Robert Browning___Selections from the Poems and Plays of Robert Browning.txt
+./MapReduce/Gutenberg/txt/Anthony Trollope___The Relics of General Chasse.txt
+./MapReduce/Gutenberg/txt/James Matthew Barrie___A Holiday in Bed and Other Sketches.txt
+./MapReduce/Gutenberg/txt/Thornton Waldo Burgess___Blacky the Crow.txt
+./MapReduce/Gutenberg/txt/Lord Tennyson___Queen Mary and Harold.txt
+./MapReduce/Gutenberg/txt/Bret Harte___Complete Poetical Works of Bret Harte.txt
+./MapReduce/Gutenberg/txt/Hamlin Garland___The Eagle's Heart.txt
+./MapReduce/Gutenberg/txt/Zane Grey___The Redheaded Outfield and Other Baseball Stories.txt
+./MapReduce/Gutenberg/txt/Edward Stratemeyer___Dave Porter and His Rivals.txt
+./MapReduce/Gutenberg/txt/Wilkie Collins___The Haunted Hotel.txt
+./MapReduce/Gutenberg/txt/Jacob Abbott___William the Conqueror.txt
+./MapReduce/Gutenberg/txt/Lyman Frank Baum___Policeman Bluejay.txt
+./MapReduce/Gutenberg/txt/Hamlin Garland___The Tyranny of the Dark.txt
+./MapReduce/Gutenberg/txt/James Otis___The Minute Boys of the Mohawk Valley.txt
+./MapReduce/Gutenberg/txt/Thomas Carlyle___History of Friedrich II of Prussia, Volume 17.txt
+./MapReduce/Gutenberg/txt/Jacob Abbott___Cyrus the Great.txt
+./MapReduce/Gutenberg/txt/Thornton Waldo Burgess___The Adventures of Reddy Fox.txt
+./MapReduce/Gutenberg/txt/William Makepeace Thackeray___The Tremendous Adventures of Major Gahagan.txt
+./MapReduce/Gutenberg/txt/William Dean Howells___Henry James, Jr.txt
+./MapReduce/Gutenberg/txt/Charles Dickens___To be Read at Dusk.txt
+./MapReduce/Gutenberg/txt/Nathaniel Hawthorne___Snow Flakes (From "Twice Told Tales").txt
+./MapReduce/Gutenberg/txt/T S Eliot___Eeldrop and Appleplex.txt
+./MapReduce/Gutenberg/txt/Anthony Trollope___Castle Richmond.txt
+./MapReduce/Gutenberg/txt/Harriet Elizabeth Beecher Stowe___The Pearl of Orr's Island.txt
+./MapReduce/Gutenberg/txt/George Alfred Henty___Won by the Sword.txt
+./MapReduce/Gutenberg/txt/Thomas Henry Huxley___The Evolution of Theology: An Anthropological Study.txt
+./MapReduce/Gutenberg/txt/Walt Whitman___Leaves of Grass.txt
+./MapReduce/Gutenberg/txt/Howard Pyle___Men of Iron.txt
+./MapReduce/Gutenberg/txt/Hector Hugh Munro___Reginald in Russia.txt
+./MapReduce/Gutenberg/txt/William Dean Howells___The Quality of Mercy.txt
+./MapReduce/Gutenberg/txt/Eugene O_Neill___The First Man.txt
+./MapReduce/Gutenberg/txt/William Dean Howells___Roundabout to Boston.txt
+./MapReduce/Gutenberg/txt/Edward Phillips Oppenheim___The Black Box.txt
+./MapReduce/Gutenberg/txt/James Otis___Ralph Gurney's Oil Speculation.txt
+./MapReduce/Gutenberg/txt/Edgar Allan Poe___The Cask of Amontillado.txt
+./MapReduce/Gutenberg/txt/Anthony Trollope___The Chateau of Prince Polignac.txt
+./MapReduce/Gutenberg/txt/Charles Kingsley___David.txt
+./MapReduce/Gutenberg/txt/Nathaniel Hawthorne___Main Street.txt
+./MapReduce/Gutenberg/txt/Daniel Defoe___Everybody's Business is Nobody's Business.txt
+./MapReduce/Gutenberg/txt/Charles Dickens___American Notes for General Circulation.txt
+./MapReduce/Gutenberg/txt/Thomas Henry Huxley___The Advance of Science in the Last Half-Century.txt
+./MapReduce/Gutenberg/txt/Edward Stratemeyer___Dave Porter in the South Seas.txt
+./MapReduce/Gutenberg/txt/Henry James___The Middle Years.txt
+./MapReduce/Gutenberg/txt/John Ruskin___The Pleasures of England.txt
+./MapReduce/Gutenberg/txt/Henry James___A Little Tour in France, Version 1.txt
+./MapReduce/Gutenberg/txt/Thomas Carlyle___Latter-Day Pamphlets.txt
+./MapReduce/Gutenberg/txt/Mark Twain___A Tramp Abroad.txt
+./MapReduce/Gutenberg/txt/John Dryden___Palamon and Arcite.txt
+./MapReduce/Gutenberg/txt/William Dean Howells___The Sleeping Car.txt
+./MapReduce/Gutenberg/txt/Bret Harte___The Story of a Mine.txt
+./MapReduce/Gutenberg/txt/Thornton Waldo Burgess___Happy Jack.txt
+./MapReduce/Gutenberg/txt/Sir Walter Scott___Chronicles of the Canongate.txt
+./MapReduce/Gutenberg/txt/Harriet Elizabeth Beecher Stowe___The May Flower, and Miscellaneous Writings.txt
+./MapReduce/Gutenberg/txt/Frank Richard Stockton___Buccaneers and Pirates of Our Coasts.txt
+./MapReduce/Gutenberg/txt/Robert Louis Stevenson___The Art of Writing and Other Essays.txt
+./MapReduce/Gutenberg/txt/George Alfred Henty___Winning His Spurs.txt
+./MapReduce/Gutenberg/txt/Thomas Carlyle___Early Kings of Norway.txt
+./MapReduce/Gutenberg/txt/Edward Stratemeyer___Richard Dare's Venture.txt
+./MapReduce/Gutenberg/txt/Edward Stratemeyer___The Missing Tin Box.txt
+./MapReduce/Gutenberg/txt/Henry Rider Haggard___Regeneration.txt
+./MapReduce/Gutenberg/txt/Robert Louis Stevenson___The Works of Robert Louis Stevenson - Swanston Edition, Volume 1.txt
+./MapReduce/Gutenberg/txt/George Alfred Henty___Held Fast For England.txt
+./MapReduce/Gutenberg/txt/Samuel Taylor Coleridge___Coleridge's Literary Remains, Volume 2.txt
+./MapReduce/Gutenberg/txt/John Bunyan___The Holy War.txt
+./MapReduce/Gutenberg/txt/Thomas Henry Huxley___Discourses.txt
+./MapReduce/Gutenberg/txt/William Makepeace Thackeray___The Paris Sketch Book Of Mr. M. A. Titmarsh.txt
+./MapReduce/Gutenberg/txt/Charlotte Mary Yonge___The Caged Lion.txt
+./MapReduce/Gutenberg/txt/Abraham Lincoln___Lincoln Letters.txt
+./MapReduce/Gutenberg/txt/John Dryden___Dryden's Works Vol. 2 (of 18).txt
+./MapReduce/Gutenberg/txt/Charles Darwin___The Effects of Cross & Self-Fertilisation in the Vegetable Kingdom.txt
+./MapReduce/Gutenberg/txt/Sir Arthur Conan Doyle___The Great Shadow and Other Napoleonic Tales.txt
+./MapReduce/Gutenberg/txt/Nathaniel Hawthorne___The Marble Faun, Volume 1.txt
+./MapReduce/Gutenberg/txt/Edgar Allan Poe___The Masque of the Red Death.txt
+./MapReduce/Gutenberg/txt/William Wymark Jacobs___Three at Table, The Lady of the Barge and Others, Part 12.txt
+./MapReduce/Gutenberg/txt/Charles Kingsley___Twenty-Five Village Sermons.txt
+./MapReduce/Gutenberg/txt/Jack London___On the Makaloa Mat.txt
+./MapReduce/Gutenberg/txt/Washington Irving___Abbotsford and Newstead Abbey.txt
+./MapReduce/Gutenberg/txt/Jerome Klapka Jerome___The Cost of Kindness.txt
+./MapReduce/Gutenberg/txt/Philip Kindred Dick___The Defenders.txt
+./MapReduce/Gutenberg/txt/Charles Dickens___The Wreck of the Golden Mary.txt
+./MapReduce/Gutenberg/txt/P G Wodehouse___Psmith, Journalist.txt
+./MapReduce/Gutenberg/txt/John Ruskin___Lectures on Architecture and Painting.txt
+./MapReduce/Gutenberg/txt/T S Eliot___The Waste Land.txt
+./MapReduce/Gutenberg/txt/Bret Harte___Stories in Light and Shadow.txt
+./MapReduce/Gutenberg/txt/Zane Grey___Riders of the Purple Sage.txt
+./MapReduce/Gutenberg/txt/Lyman Frank Baum___Aunt Jane's Nieces in Society.txt
+./MapReduce/Gutenberg/txt/Nathaniel Hawthorne___The House of the Seven Gables.txt
+./MapReduce/Gutenberg/txt/Harold Bindloss___Johnstone of the Border.txt
+./MapReduce/Gutenberg/txt/Harold Bindloss___By Right of Purchase.txt
+./MapReduce/Gutenberg/txt/D H Lawrence___Sea and Sardinia.txt
+./MapReduce/Gutenberg/txt/Harold Bindloss___Brandon of the Engineers.txt
+./MapReduce/Gutenberg/txt/R M Ballantyne___The Lively Poll.txt
+./MapReduce/Gutenberg/txt/Charles Kingsley___Discipline and Other Sermons.txt
+./MapReduce/Gutenberg/txt/Benjamin Disraeli___Tancred.txt
+./MapReduce/Gutenberg/txt/Charlotte Mary Yonge___Old Times at Otterbourne.txt
+./MapReduce/Gutenberg/txt/John Bunyan___The Jerusalem Sinner Saved.txt
+./MapReduce/Gutenberg/txt/William Dean Howells___Spanish Prisoners of War.txt
+./MapReduce/Gutenberg/txt/Mark Twain___Following the Equator, Complete.txt
+./MapReduce/Gutenberg/txt/Sir Isaac Newton___The Chronology of Ancient Kingdoms Amended.txt
+./MapReduce/Gutenberg/txt/R M Ballantyne___The Young Fur Traders.txt
+./MapReduce/Gutenberg/txt/Nathaniel Hawthorne___Time's Portraiture.txt
+./MapReduce/Gutenberg/txt/Sinclair Lewis___Free Air.txt
+./MapReduce/Gutenberg/txt/Henry James___The Pupil.txt
+./MapReduce/Gutenberg/txt/James Matthew Barrie___The Admirable Crichton.txt
+./MapReduce/Gutenberg/txt/Robert Louis Stevenson___The Works of Robert Louis Stevenson - Swanston Edition, Volume 21.txt
+./MapReduce/Gutenberg/txt/Henry James___The Letters of Henry James, Volume 2.txt
+./MapReduce/Gutenberg/txt/William Dean Howells___The Daughter of the Storage.txt
+./MapReduce/Gutenberg/txt/Joseph Conrad___Almayer's Folly.txt
+./MapReduce/Gutenberg/txt/Howard Pyle___Pepper & Salt.txt
+./MapReduce/Gutenberg/txt/P G Wodehouse___A Prefect's Uncle.txt
+./MapReduce/Gutenberg/txt/Henry James___Roderick Hudson.txt
+./MapReduce/Gutenberg/txt/Stephen Leacock___Sunshine Sketches of a Little Town.txt
+./MapReduce/Gutenberg/txt/Elizabeth Barrett Browning___The Poetical Works of Elizabeth Barrett Browning Volume I.txt
+./MapReduce/Gutenberg/txt/Alfred Russel Wallace___Contributions to the Theory of Natural Selection.txt
+./MapReduce/Gutenberg/txt/Thomas Hardy___A Laodicean.txt
+./MapReduce/Gutenberg/txt/Bertrand Russell___The Problem of China.txt
+./MapReduce/Gutenberg/txt/Benjamin Disraeli___Henrietta Temple.txt
+./MapReduce/Gutenberg/txt/William Wymark Jacobs___Ship's Company.txt
+./MapReduce/Gutenberg/txt/John Galsworthy___Villa Rubein and Other Stories.txt
+./MapReduce/Gutenberg/txt/Herbert George Wells___The Wonderful Visit.txt
+./MapReduce/Gutenberg/txt/William Dean Howells___Through the Eye of the Needle.txt
+./MapReduce/Gutenberg/txt/Washington Irving___Tales of a Traveller.txt
+./MapReduce/Gutenberg/txt/William Dean Howells___The Register.txt
+./MapReduce/Gutenberg/txt/Henry Rider Haggard___Cetywayo and his White Neighbours.txt
+./MapReduce/Gutenberg/txt/Thomas Henry Huxley___Critiques and Addresses.txt
+./MapReduce/Gutenberg/txt/William Somerset Maugham___The Land of The Blessed Virgin; Sketches and Impressions in Andalusia.txt
+./MapReduce/Gutenberg/txt/Jerome Klapka Jerome___Idle Thoughts of an Idle Fellow.txt
+./MapReduce/Gutenberg/txt/James Joyce___Ulysses.txt
+./MapReduce/Gutenberg/txt/William Dean Howells___Short Stories and Essays.txt
+./MapReduce/Gutenberg/txt/Edward Stratemeyer___The Young Bridge-Tender.txt
+./MapReduce/Gutenberg/txt/P G Wodehouse___Mike and Psmith.txt
+./MapReduce/Gutenberg/txt/Thomas Henry Huxley___Science & Education.txt
+./MapReduce/Gutenberg/txt/William Wymark Jacobs___For Better or Worse, Ship's Company, Part 10.txt
+./MapReduce/Gutenberg/txt/Abraham Lincoln___The Writings of Abraham Lincoln, Volume 1: 1832-1843.txt
+./MapReduce/Gutenberg/txt/James Matthew Barrie___A Window in Thrums.txt
+./MapReduce/Gutenberg/txt/Lucy Maud Montgomery___The Story Girl.txt
+./MapReduce/Gutenberg/txt/William Wymark Jacobs___Bill's Paper Chase, Lady of the Barge and Others, Part 3.txt
+./MapReduce/Gutenberg/txt/Beatrix Potter___The Tale of Samuel Whiskers.txt
+./MapReduce/Gutenberg/txt/George Alfred Henty___The Young Colonists.txt
+./MapReduce/Gutenberg/txt/Herbert George Wells___Mr. Britling Sees It Through.txt
+./MapReduce/Gutenberg/txt/Sir William Schwenck Gilbert___Fifty Bab Ballads.txt
+./MapReduce/Gutenberg/txt/Mark Twain___The $30,000 Bequest and Other Stories.txt
+./MapReduce/Gutenberg/txt/John Morley___Critical Miscellanies, Volume 3, Essay 7, A Sketch.txt
+./MapReduce/Gutenberg/txt/John Galsworthy___The Pigeon.txt
+./MapReduce/Gutenberg/txt/Oscar Wilde___Shorter Prose Pieces.txt
+./MapReduce/Gutenberg/txt/R M Ballantyne___Up in the Clouds.txt
+./MapReduce/Gutenberg/txt/Lyman Frank Baum___The Tin Woodman of Oz.txt
+./MapReduce/Gutenberg/txt/Louisa May Alcott___Flower Fables.txt
+./MapReduce/Gutenberg/txt/Herbert George Wells___The Wife of Sir Isaac Harman.txt
+./MapReduce/Gutenberg/txt/Robert Louis Stevenson___The Works of Robert Louis Stevenson - Swanston Edition, Volume 10.txt
+./MapReduce/Gutenberg/txt/Charlotte Mary Yonge___Nuttie's Father.txt
+./MapReduce/Gutenberg/txt/Michael Faraday___The Chemical History Of A Candle.txt
+./MapReduce/Gutenberg/txt/Ralph Waldo Emerson___May-Day.txt
+./MapReduce/Gutenberg/txt/Edward Stratemeyer___The Rover Boys on Treasure Isle.txt
+./MapReduce/Gutenberg/txt/Henry James___The Real Thing.txt
+./MapReduce/Gutenberg/txt/Robert Louis Stevenson___Treasure Island.txt
+./MapReduce/Gutenberg/txt/John Morley___Critical Miscellanies, Volume 3, Essay 8, France in the Eighteenth Century.txt
+./MapReduce/Gutenberg/txt/Charles Dickens___Oliver Twist.txt
+./MapReduce/Gutenberg/txt/Andrew Lang___The Clyde Mystery.txt
+./MapReduce/Gutenberg/txt/Robert Burns___Tam O'Shanter.txt
+./MapReduce/Gutenberg/txt/Thornton Waldo Burgess___The Adventures of Buster Bear.txt
+./MapReduce/Gutenberg/txt/William Butler Yeats___The Hour Glass.txt
+./MapReduce/Gutenberg/txt/Bret Harte___A Waif of the Plains.txt
+./MapReduce/Gutenberg/txt/William Somerset Maugham___The Moon and Sixpence.txt
+./MapReduce/Gutenberg/txt/George Bernard Shaw___Press Cuttings.txt
+./MapReduce/Gutenberg/txt/William Dean Howells___Of Literature.txt
+./MapReduce/Gutenberg/txt/Walt Whitman___Complete Prose Works.txt
+./MapReduce/Gutenberg/txt/Nathaniel Hawthorne___Browne's Folly.txt
+./MapReduce/Gutenberg/txt/Thomas Crofton Croker___A Walk from London to Fulham.txt
+./MapReduce/Gutenberg/txt/Nathaniel Hawthorne___Passages from the American Notebooks, Volume 1.txt
+./MapReduce/Gutenberg/txt/Baronness Orczy___Petticoat Rule.txt
+./MapReduce/Gutenberg/txt/Jacob Abbott___Margaret of Anjou.txt
+./MapReduce/Gutenberg/txt/William Wymark Jacobs___Stepping Backwards, Night Watches, Part 5.txt
+./MapReduce/Gutenberg/txt/R M Ballantyne___The Butterfly's Ball.txt
+./MapReduce/Gutenberg/txt/Walt Whitman___The Wound Dresser.txt
+./MapReduce/Gutenberg/txt/William Butler Yeats___The Wild Swans at Coole.txt
+./MapReduce/Gutenberg/txt/Henry Rider Haggard___Benita, An African Romance.txt
+./MapReduce/Gutenberg/txt/Rudyard Kipling___Just So Stories.txt
+./MapReduce/Gutenberg/txt/Andrew Lang___Rhymes a la Mode.txt
+./MapReduce/Gutenberg/txt/Herbert George Wells___What is Coming?.txt
+./MapReduce/Gutenberg/txt/Henry James___The Reverberator.txt
+./MapReduce/Gutenberg/txt/Harold Bindloss___Wyndham's Pal.txt
+./MapReduce/Gutenberg/txt/Jerome Klapka Jerome___Stage-Land.txt
+./MapReduce/Gutenberg/txt/Charlotte Mary Yonge___A Reputed Changeling.txt
+./MapReduce/Gutenberg/txt/Mary Shelley___Notes to the Complete Poetical Works of Percy Bysshe Shelley.txt
+./MapReduce/Gutenberg/txt/Lyman Frank Baum___Tik-Tok of Oz.txt
+./MapReduce/Gutenberg/txt/Louisa May Alcott___Comic Tragedies.txt
+./MapReduce/Gutenberg/txt/Robert Louis Stevenson___Father Damien.txt
+./MapReduce/Gutenberg/txt/James Fenimore Cooper___The Headsman.txt
+./MapReduce/Gutenberg/txt/Herman Melville___Mardi: and A Voyage Thither, Volume 2.txt
+./MapReduce/Gutenberg/txt/Thomas Hardy___Satires of Circumstance.txt
+./MapReduce/Gutenberg/txt/Nathaniel Hawthorne___The Christmas Banquet (From "Mosses From An Old Manse").txt
+./MapReduce/Gutenberg/txt/Robert Louis Stevenson___The Works of Robert Louis Stevenson - Swanston Edition, Volume 13.txt
+./MapReduce/Gutenberg/txt/Edward Phillips Oppenheim___A Maker of History.txt
+./MapReduce/Gutenberg/txt/William Wymark Jacobs___Sentence Deferred, Sailor's Knots, Part 4.txt
+./MapReduce/Gutenberg/txt/George Alfred Henty___One of the 28th.txt
+./MapReduce/Gutenberg/txt/Henry James___Italian Hours.txt
+./MapReduce/Gutenberg/txt/John Locke___An Essay Concerning Humane Understanding, Volume 1.txt
+./MapReduce/Gutenberg/txt/James Matthew Barrie___"Der Tag".txt
+./MapReduce/Gutenberg/txt/Edward Phillips Oppenheim___Berenice.txt
+./MapReduce/Gutenberg/txt/Louisa May Alcott___The Louisa Alcott Reader.txt
+./MapReduce/Gutenberg/txt/Anthony Trollope___The Way We Live Now.txt
+./MapReduce/Gutenberg/txt/Edgar Rice Burroughs___The Gods of Mars.txt
+./MapReduce/Gutenberg/txt/William Wymark Jacobs___Striking Hard, Deep Waters, Part 10.txt
+./MapReduce/Gutenberg/txt/Robert Louis Stevenson___A Child's Garden of Verses, Version 2.txt
+./MapReduce/Gutenberg/txt/Jacob Abbott___Rollo in Holland.txt
+./MapReduce/Gutenberg/txt/William Henry Hudson___A Traveller in Little Things.txt
+./MapReduce/Gutenberg/txt/O Henry___Waifs and Strays Part 1.txt
+./MapReduce/Gutenberg/txt/William Dean Howells___An Open-Eyed Conspiracy; An Idyl of Saratoga.txt
