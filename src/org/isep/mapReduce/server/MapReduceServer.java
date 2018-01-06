@@ -1,5 +1,6 @@
 package org.isep.mapReduce.server;
 
+import java.io.Serializable;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
@@ -23,9 +24,15 @@ public class MapReduceServer extends UnicastRemoteObject implements MapReduce {
 
     private final Function<String, List<DataPair<String,Integer>>> mapper = new WCMapper();
     private final BiFunction<Integer,Integer,Integer> reducer = new WCReducer();
+    private List<String> datas;
+    private List<DataPair<String, Integer>> mappedData;
+    private Map<String,List<Integer>> shuffledData;
 
     protected MapReduceServer() throws RemoteException {
         super();
+        datas = new ArrayList<String>();
+        mappedData = new ArrayList<DataPair<String, Integer>>();
+        shuffledData = new HashMap<String,List<Integer>>();
     }
 
     @Override
@@ -39,28 +46,26 @@ public class MapReduceServer extends UnicastRemoteObject implements MapReduce {
     }
 
     @Override
-    public List<DataPair<String,Integer>> doMap(List<String> input) {
-        return input.parallelStream()
+    public void doMap() {
+    	mappedData = getData().parallelStream()
                 .flatMap(d -> mapper.apply(d).stream())
                 .collect(Collectors.toList());
     }
 
     @Override
-    public Map<String,List<Integer>> doShuffle(List<DataPair<String, Integer>> r) {
-        Map<String, List<Integer>> m = new HashMap<>();
+    public void doShuffle() {
+    	shuffledData = new HashMap<>();
 
-        for(DataPair<String, Integer> p: r) {
-            List<Integer> l = m.getOrDefault(p.getKey(), new ArrayList<>());
+        for(DataPair<String, Integer> p: mappedData) {
+            List<Integer> l = shuffledData.getOrDefault(p.getKey(), new ArrayList<>());
             l.add(p.getValue());
-            m.put(p.getKey(), l);
+            shuffledData.put(p.getKey(), l);
         }
-
-        return m;
     }
 
     @Override
-    public List<DataPair<String,Integer>> doReduce(Integer identity, Map<String, List<Integer>> data) {
-        return data.entrySet().parallelStream()
+    public void doReduce(Integer identity) {
+    	mappedData = shuffledData.entrySet().parallelStream()
                 .map(e -> {
                 	Integer result =identity;
                         for(Integer i: e.getValue()) {
@@ -72,7 +77,35 @@ public class MapReduceServer extends UnicastRemoteObject implements MapReduce {
     }
 
 	@Override
-	public void setFileList(List<String> flist) {
-		
+	public void setData(List<String> data) {
+		datas = data;
+	}
+	
+	@Override
+	public List<String> getData() {
+		return datas;
+	}
+
+	@Override
+	public List<DataPair<String, Integer>> getMappedData() {
+		return mappedData;
+	}
+
+	@Override
+	public void setMappedData(List<DataPair<String, Integer>> mappedData) throws RemoteException {
+		this.mappedData = mappedData;
+	}
+
+	@Override
+	public void clearAll() throws RemoteException {
+		if (this.datas != null) {
+			this.datas.clear();
+		}
+		if (this.shuffledData != null) {
+			this.shuffledData.clear();
+		}
+		if (this.mappedData != null) {
+			this.mappedData.clear();
+		}
 	}
 }

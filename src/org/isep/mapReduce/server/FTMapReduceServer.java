@@ -158,21 +158,14 @@ public class FTMapReduceServer extends UnicastRemoteObject implements FTMapReduc
         return def;
     }
 
-    /*
-    @Override
-    public String getMessage() throws RemoteException {
-        return delegate.getMessage();
-    }
-	*/
-
-    private void replicateMapping(List<String> datas) {
+    private void replicateMapping() {
         List<Future> ftList = new ArrayList<>();
         for(Map.Entry<String, FTMapReduce> replica : replicas.entrySet()) {
 
             if(!serverName.equals(replica.getKey())) {
                 Future f = pool.submit(() -> {
                     try {
-						replica.getValue().doMap(datas);
+						replica.getValue().doMap();
 					} catch (RemoteException e) {
 						e.printStackTrace();
 					}
@@ -196,18 +189,130 @@ public class FTMapReduceServer extends UnicastRemoteObject implements FTMapReduc
         }
     }
 
-    /*
-    public void setMessage(String message) throws RemoteException {
-        delegate.setMessage(message);
-        // Replicates only if leader
-        if(isLeader) {
-            replicateMessage(message);
+    private void replicateReduce(Integer identity) {
+        List<Future> ftList = new ArrayList<>();
+        for(Map.Entry<String, FTMapReduce> replica : replicas.entrySet()) {
 
+            if(!serverName.equals(replica.getKey())) {
+                Future f = pool.submit(() -> {
+                    try {
+						replica.getValue().doReduce(identity);
+					} catch (RemoteException e) {
+						e.printStackTrace();
+					}
+                });
+
+                ftList.add(f);
+            }
+        }
+
+        // Wait for each task to end.
+        for(Future f: ftList) {
+            try {
+                f.get(30, TimeUnit.SECONDS);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            } catch (ExecutionException e) {
+                e.printStackTrace();
+            } catch (TimeoutException e) {
+                e.printStackTrace();
+            }
         }
     }
-    */
     
-    /**
+    
+    private void replicateData(List<String> datas) {
+        List<String> replicateData = null;
+        int cpt = 0, start=0, end=0;
+        for(Map.Entry<String, FTMapReduce> replica : replicas.entrySet()) {
+        	
+            if(!serverName.equals(replica.getKey())) {
+	        	start = cpt*datas.size()/replicas.size();
+	        	end = (cpt+1)*datas.size()/replicas.size();
+                try {
+                	replica.getValue().setData(datas.subList(start, end));
+				} catch (RemoteException e) {
+					e.printStackTrace();
+				}
+                cpt++;
+            }
+        }
+    }
+    
+    private void replicateMappedData() throws RemoteException {
+        List<String> replicateData = null;
+        int cpt = 0, start=0, end=0;
+        List<Future> ftList = new ArrayList<>();
+        for(Map.Entry<String, FTMapReduce> replica : replicas.entrySet()) {
+
+            if(!serverName.equals(replica.getKey())) {
+	        	start = cpt*getMappedData().size()/replicas.size();
+	        	end = (cpt+1)*getMappedData().size()/replicas.size();
+            	Future f = doReplicateMappedData(replica, start, end);
+
+                ftList.add(f);
+            }
+        }
+
+        // Wait for each task to end.
+        for(Future f: ftList) {
+            try {
+                f.get(30, TimeUnit.SECONDS);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            } catch (ExecutionException e) {
+                e.printStackTrace();
+            } catch (TimeoutException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+    
+    private Future doReplicateMappedData(Map.Entry<String, FTMapReduce> replica,
+    									int start, int end) {
+    	Future f = pool.submit(() -> {
+            try {
+            	replica.getValue().setMappedData(getMappedData().subList(start, end));
+			} catch (RemoteException e) {
+				e.printStackTrace();
+			}
+        });
+    	return f;
+    }
+    
+    private void replicateGetMappedData() throws RemoteException {
+        List<Future> ftList = new ArrayList<>();
+    	clearAll();
+        for(Map.Entry<String, FTMapReduce> replica : replicas.entrySet()) {
+
+            if(!serverName.equals(replica.getKey())) {
+                Future f = pool.submit(() -> {
+                    try {
+                    	getMappedData().addAll(replica.getValue().getMappedData());
+					} catch (RemoteException e) {
+						e.printStackTrace();
+					}
+                });
+
+                ftList.add(f);
+            }
+        }
+
+        // Wait for each task to end.
+        for(Future f: ftList) {
+            try {
+                f.get(50, TimeUnit.SECONDS);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            } catch (ExecutionException e) {
+                e.printStackTrace();
+            } catch (TimeoutException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+    
+	/**
      * Lists the names of known replicas if it is leader.
      * @return
      * @throws RemoteException
@@ -229,7 +334,6 @@ public class FTMapReduceServer extends UnicastRemoteObject implements FTMapReduc
         /**if(isLeader) {
             replica.registerReplica(serverName,this);
         }*/
-
     }
 
     public void startPing() {
@@ -244,19 +348,69 @@ public class FTMapReduceServer extends UnicastRemoteObject implements FTMapReduc
 		return delegate.getReducer();
 	}
 	@Override
-	public List<DataPair<String, Integer>> doMap(List<String> input) throws RemoteException {
-		return delegate.doMap(input);
+	public void doMap() throws RemoteException {
+        if(isLeader) {
+            replicateMapping();
+        }
+        else {
+        	delegate.doMap();
+        }
 	}
 	@Override
-	public Map<String, List<Integer>> doShuffle(List<DataPair<String, Integer>> r) throws RemoteException {
-		return delegate.doShuffle(r);
+	public void doShuffle() throws RemoteException {
+		if (isLeader) {
+			setMappedData(getAllMappedData());
+			delegate.doShuffle();
+			replicateMappedData();
+		}
 	}
 	@Override
-	public List<DataPair<String, Integer>> doReduce(Integer identity, Map<String, List<Integer>> data) throws RemoteException {
-		return delegate.doReduce(identity, data);
+	public void doReduce(Integer identity) throws RemoteException {
+        if(isLeader) {
+            replicateReduce(identity);
+        }
+        else {
+        	delegate.doReduce(identity);
+        }
 	}
 	@Override
-	public void setFileList(List<String> flist) {
-		
+	public void setData(List<String> data) throws RemoteException {
+        if(isLeader) {
+            replicateData(data);
+        }
+        else {
+        	delegate.setData(data);
+        }
+	}
+	@Override
+	public List<String> getData() throws RemoteException {
+		return delegate.getData();
+	}
+	@Override
+	public List<DataPair<String, Integer>> getMappedData() throws RemoteException {
+		return delegate.getMappedData();
+	}
+	@Override
+	public void setMappedData(List<DataPair<String, Integer>> mappedData) throws RemoteException {
+        if(isLeader) {
+        	delegate.setMappedData(mappedData);
+            replicateMappedData();
+        }
+        else {
+        	delegate.setMappedData(mappedData);
+        }
+	}
+
+	@Override
+	public List<DataPair<String, Integer>> getAllMappedData() throws RemoteException {
+        if(isLeader) {
+            replicateGetMappedData();
+            System.out.println(getMappedData());
+        }
+        return getMappedData();
+	}
+	@Override
+	public void clearAll() throws RemoteException {
+		delegate.clearAll();
 	}
 }

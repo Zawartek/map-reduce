@@ -4,6 +4,8 @@ import java.rmi.Remote;
 import java.rmi.RemoteException;
 import java.util.List;
 
+import org.isep.mapReduce.data.DataPair;
+
 
 public interface FTMapReduce extends Remote, MapReduce {
 
@@ -32,5 +34,7 @@ public interface FTMapReduce extends Remote, MapReduce {
      */
     void registerReplica(String server, FTMapReduce replica) throws RemoteException;
 
-	void setFileList(List<String> flist) throws RemoteException;
+	void setData(List<String> data) throws RemoteException;
+
+	List<DataPair<String, Integer>> getAllMappedData() throws RemoteException;
 }

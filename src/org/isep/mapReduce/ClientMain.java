@@ -56,36 +56,36 @@ public class ClientMain {
         List<String> data = new ArrayList<>();
         List<DataPair<String,Integer>> resultMain = new ArrayList<>();
         int count = 0;
-        // Loading data
-        currentServer.setFileList(flist);
         System.out.println("Loading files");
         for(String p: flist) {
             loadFile(p,data);
             if (++count % BATCH_SIZE == 0 || flist.size() == count) {
+            	currentServer.setData(data);
                 //System.out.println("MAP PHASE");
-                List<DataPair<String, Integer>> r = currentServer.doMap(data);
+                currentServer.doMap();
                 // System.out.println("Heap size is: " + Runtime.getRuntime().totalMemory() + " ON " + Runtime.getRuntime().maxMemory());
 
                 //System.out.println("SHUFFLE PHASE");
-                Map<String, List<Integer>> shuffled = currentServer.doShuffle(r);
+                currentServer.doShuffle();
                 //System.out.println("Heap size is: " + Runtime.getRuntime().totalMemory() + " ON " + Runtime.getRuntime().maxMemory());
 
                 //System.out.println("REDUCE PHASE");
-                List<DataPair<String, Integer>> result = currentServer.doReduce(0, shuffled);
+                currentServer.doReduce(0);
                 //System.out.println("Heap size is: " + Runtime.getRuntime().totalMemory() + " ON " + Runtime.getRuntime().maxMemory());
 
-
-                //System.out.println("Reduce SHUFFLE PHASE");
-                result.addAll(resultMain);
-                Map<String, List<Integer>> shuffled2 = currentServer.doShuffle(result);
+                currentServer.getMappedData().addAll(resultMain);
+                currentServer.doShuffle();
                 //System.out.println("TREE REDUCE PHASE");
-                resultMain = currentServer.doReduce(0, shuffled2);
+                currentServer.doReduce(0);
                 //System.out.println("Heap size is: " + Runtime.getRuntime().totalMemory() + " ON " + Runtime.getRuntime().maxMemory());
+                
+                resultMain = currentServer.getAllMappedData();
                 data.clear();
                 //System.out.println("Processed:" + count + " on " + flist.size());
             }
         }
         //printing results
+        System.out.println("print result");
         resultMain.forEach(d -> System.out.println(d.getKey() +";" + d.getValue()));
     }
 

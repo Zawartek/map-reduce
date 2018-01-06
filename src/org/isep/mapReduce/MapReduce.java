@@ -13,8 +13,12 @@ public interface MapReduce extends Remote {
 	
 	public Function<String, List<DataPair<String,Integer>>> getMapper() throws RemoteException;
 	public BiFunction<Integer,Integer,Integer> getReducer() throws RemoteException;
-	public List<DataPair<String,Integer>> doMap(List<String> input) throws RemoteException;
-	public Map<String,List<Integer>> doShuffle(List<DataPair<String, Integer>> r) throws RemoteException;
-	 public List<DataPair<String,Integer>> doReduce(Integer identity, Map<String, List<Integer>> data) throws RemoteException;
-	public void setFileList(List<String> flist) throws RemoteException;
+	public void doMap() throws RemoteException;
+	public void doShuffle() throws RemoteException;
+	public void doReduce(Integer identity) throws RemoteException;
+	public void setData(List<String> data) throws RemoteException;
+	public List<String> getData() throws RemoteException;
+	List<DataPair<String, Integer>> getMappedData() throws RemoteException;
+	public void setMappedData(List<DataPair<String, Integer>> mappedData) throws RemoteException;
+	public void clearAll() throws RemoteException;
 }
