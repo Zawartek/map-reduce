@@ -29,7 +29,7 @@ public class ClientMain {
         try {
             List<String> lines  = Files.readAllLines(new File(path).toPath());
             data.addAll(lines);
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
