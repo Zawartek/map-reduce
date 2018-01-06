@@ -71,4 +71,8 @@ public class MapReduceServer extends UnicastRemoteObject implements MapReduce {
 
     }
 
+	@Override
+	public void setFileList(List<String> flist) {
+		
+	}
 }

@@ -31,4 +31,6 @@ public interface FTMapReduce extends Remote, MapReduce {
      * @throws RemoteException
      */
     void registerReplica(String server, FTMapReduce replica) throws RemoteException;
+
+	void setFileList(List<String> flist);
 }

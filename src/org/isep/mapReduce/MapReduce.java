@@ -16,4 +16,5 @@ public interface MapReduce extends Remote {
 	public List<DataPair<String,Integer>> doMap(List<String> input) throws RemoteException;
 	public Map<String,List<Integer>> doShuffle(List<DataPair<String, Integer>> r) throws RemoteException;
 	 public List<DataPair<String,Integer>> doReduce(Integer identity, Map<String, List<Integer>> data) throws RemoteException;
+	public void setFileList(List<String> flist);
 }

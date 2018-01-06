@@ -57,7 +57,7 @@ public class ClientMain {
         List<DataPair<String,Integer>> resultMain = new ArrayList<>();
         int count = 0;
         // Loading data
-        
+        currentServer.setFileList(flist);
         System.out.println("Loading files");
         for(String p: flist) {
             loadFile(p,data);

@@ -255,4 +255,8 @@ public class FTMapReduceServer extends UnicastRemoteObject implements FTMapReduc
 	public List<DataPair<String, Integer>> doReduce(Integer identity, Map<String, List<Integer>> data) throws RemoteException {
 		return delegate.doReduce(identity, data);
 	}
+	@Override
+	public void setFileList(List<String> flist) {
+		
+	}
 }
