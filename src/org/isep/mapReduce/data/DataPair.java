@@ -2,7 +2,7 @@ package org.isep.mapReduce.data;
 
 import java.io.Serializable;
 
-public class DataPair<K,V> implements Serializable{
+public class DataPair<K,V> implements Serializable {
     private K key;
     private V value;
 
