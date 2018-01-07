@@ -76,7 +76,7 @@ public class FTMapReduceServer extends UnicastRemoteObject implements FTMapReduc
             if(master!=null && !isLeader) {
                 List<String> repList = null;
                 try {
-                    System.out.println(serverName);
+                    //System.out.println(serverName);
                     master.registerReplica(serverName,this);
                     repList = master.getNeighbors();
                 } catch (RemoteException e) {
@@ -180,7 +180,7 @@ public class FTMapReduceServer extends UnicastRemoteObject implements FTMapReduc
         // Wait for each task to end.
         for(Future f: ftList) {
             try {
-                f.get(30, TimeUnit.SECONDS);
+                f.get(100, TimeUnit.SECONDS);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             } catch (ExecutionException e) {
@@ -211,7 +211,7 @@ public class FTMapReduceServer extends UnicastRemoteObject implements FTMapReduc
         // Wait for each task to end.
         for(Future f: ftList) {
             try {
-                f.get(30, TimeUnit.SECONDS);
+                f.get(100, TimeUnit.SECONDS);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             } catch (ExecutionException e) {
@@ -229,14 +229,17 @@ public class FTMapReduceServer extends UnicastRemoteObject implements FTMapReduc
         for(Map.Entry<String, FTMapReduce> replica : replicas.entrySet()) {
         	
             if(!serverName.equals(replica.getKey())) {
-	        	start = cpt*datas.size()/replicas.size();
-	        	end = (cpt+1)*datas.size()/replicas.size();
+	        	start = cpt*(datas.size()/(replicas.size()-1)+1);
+	        	end = start + (datas.size()/(replicas.size()-1)+1);
+                cpt++;
+	        	if (end>datas.size() || cpt==(replicas.size()-1)) {
+	        		end = datas.size();
+	        	}
                 try {
                 	replica.getValue().setData(new ArrayList<>(datas.subList(start, end)));
 				} catch (RemoteException e) {
 					e.printStackTrace();
 				}
-                cpt++;
             }
         }
     }
@@ -248,8 +251,12 @@ public class FTMapReduceServer extends UnicastRemoteObject implements FTMapReduc
         for(Map.Entry<String, FTMapReduce> replica : replicas.entrySet()) {
 
             if(!serverName.equals(replica.getKey())) {
-	        	start = cpt*getMappedData().size()/replicas.size();
-	        	end = (cpt+1)*getMappedData().size()/replicas.size();
+	        	start = cpt*(getMappedData().size()/(replicas.size()-1)+1);
+	        	end = start + (getMappedData().size()/(replicas.size()-1)+1);
+                cpt++;
+	        	if (end>getMappedData().size() || cpt==(replicas.size()-1)) {
+	        		end = getMappedData().size();
+	        	}
             	Future f = doReplicateMappedData(replica, start, end);
 
                 ftList.add(f);
@@ -259,7 +266,7 @@ public class FTMapReduceServer extends UnicastRemoteObject implements FTMapReduc
         // Wait for each task to end.
         for(Future f: ftList) {
             try {
-                f.get(30, TimeUnit.SECONDS);
+                f.get(100, TimeUnit.SECONDS);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             } catch (ExecutionException e) {
@@ -287,14 +294,19 @@ public class FTMapReduceServer extends UnicastRemoteObject implements FTMapReduc
         String start="", end="";
         Iterator<String> keySet = getShuffledData().keySet().iterator();
         List<Future> ftList = new ArrayList<>();
+    	System.out.println("ShuffledDatas from " + getShuffledData().firstKey() + " to " + getShuffledData().lastKey());
+    	System.out.println("Shuffled Datas: " + getShuffledData().size()
+    			+ " Slaves server: " + (replicas.size()-1)
+    			+ " Data count by slave " + (getShuffledData().size()/(replicas.size()-1)));
         for(Map.Entry<String, FTMapReduce> replica : replicas.entrySet()) {
 
             if(!serverName.equals(replica.getKey())) {
 	        	start = keySet.next();
 	        	end = start;
-	        	for(int cpt=0;cpt<getShuffledData().size()/replicas.size() && keySet.hasNext();++cpt) {
+	        	for(int cpt=0;cpt<=(getShuffledData().size()/(replicas.size()-1)+1) && keySet.hasNext();++cpt) {
 	        		end = keySet.next();
 	        	}
+	        	System.out.println(start + " - " + end);
             	Future f = doReplicateShuffledData(replica, start, end);
 
                 ftList.add(f);
@@ -304,7 +316,7 @@ public class FTMapReduceServer extends UnicastRemoteObject implements FTMapReduc
         // Wait for each task to end.
         for(Future f: ftList) {
             try {
-                f.get(30, TimeUnit.SECONDS);
+                f.get(100, TimeUnit.SECONDS);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             } catch (ExecutionException e) {
@@ -329,14 +341,15 @@ public class FTMapReduceServer extends UnicastRemoteObject implements FTMapReduc
     
     private void replicateGetMappedData() throws RemoteException {
         List<Future> ftList = new ArrayList<>();
-    	clearAll();
         for(Map.Entry<String, FTMapReduce> replica : replicas.entrySet()) {
 
             if(!serverName.equals(replica.getKey())) {
                 Future f = pool.submit(() -> {
+                	List<DataPair<String,Integer>> resultTemp;
                     try {
-                    	getMappedData().addAll(replica.getValue().getMappedData());
-                    	replica.getValue().clearAll();
+                    	resultTemp = replica.getValue().getMappedData();
+                    	resultTemp.addAll(delegate.getMappedData());
+                    	delegate.setMappedData(resultTemp);
 					} catch (RemoteException e) {
 						e.printStackTrace();
 					}
@@ -349,7 +362,7 @@ public class FTMapReduceServer extends UnicastRemoteObject implements FTMapReduc
         // Wait for each task to end.
         for(Future f: ftList) {
             try {
-                f.get(50, TimeUnit.SECONDS);
+                f.get(100, TimeUnit.SECONDS);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             } catch (ExecutionException e) {
@@ -377,7 +390,7 @@ public class FTMapReduceServer extends UnicastRemoteObject implements FTMapReduc
     @Override
     public void registerReplica(String server, FTMapReduce replica) throws RemoteException {
         replicas.put(server,replica);
-        System.out.println("Registered " + server);
+        //System.out.println("Registered " + server);
         // If it is leader, registers back to the replica
         /**if(isLeader) {
             replica.registerReplica(serverName,this);
@@ -410,6 +423,9 @@ public class FTMapReduceServer extends UnicastRemoteObject implements FTMapReduc
 			delegate.setMappedData(getAllMappedData());
 			delegate.doShuffle();
 			replicateShuffledData();
+		}
+		else {
+			delegate.doShuffle();
 		}
 	}
 	@Override
@@ -463,7 +479,6 @@ public class FTMapReduceServer extends UnicastRemoteObject implements FTMapReduc
 	@Override
 	public void setShuffledData(SortedMap<String, List<Integer>> shuffledData) throws RemoteException {
 		delegate.setShuffledData(shuffledData);
-		
 	}
 	@Override
 	public SortedMap<String, List<Integer>> getShuffledData() throws RemoteException {

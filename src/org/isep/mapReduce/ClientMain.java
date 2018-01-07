@@ -58,6 +58,7 @@ public class ClientMain {
 
         List<String> data = new ArrayList<>();
         List<DataPair<String,Integer>> resultMain = new ArrayList<>();
+        List<DataPair<String,Integer>> resultTemp;
         int count = 0;
         System.out.println("Loading files");
         for(String p: flist) {
@@ -75,8 +76,9 @@ public class ClientMain {
                 //System.out.println("REDUCE PHASE");
                 currentServer.doReduce(0);
                 //System.out.println("Heap size is: " + Runtime.getRuntime().totalMemory() + " ON " + Runtime.getRuntime().maxMemory());
-
-                currentServer.getMappedData().addAll(resultMain);
+                resultTemp = currentServer.getAllMappedData();
+                resultTemp.addAll(resultMain);
+                currentServer.setMappedData(resultTemp);
                 currentServer.doShuffle();
                 //System.out.println("TREE REDUCE PHASE");
                 currentServer.doReduce(0);
@@ -88,8 +90,7 @@ public class ClientMain {
             }
         }
         //printing results
-        System.out.println("print result");
-        System.out.println(resultMain.size());
+        System.out.println("print " + resultMain.size() + " results");
         resultMain.forEach(d -> System.out.println(d.getKey() +";" + d.getValue()));
     }
 
