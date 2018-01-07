@@ -1,12 +1,12 @@
 package org.isep.mapReduce.server;
 
-import java.io.Serializable;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.SortedMap;
+import java.util.TreeMap;
 import java.util.function.BiFunction;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -26,13 +26,13 @@ public class MapReduceServer extends UnicastRemoteObject implements MapReduce {
     private final BiFunction<Integer,Integer,Integer> reducer = new WCReducer();
     private List<String> datas;
     private List<DataPair<String, Integer>> mappedData;
-    private Map<String,List<Integer>> shuffledData;
+    private SortedMap<String,List<Integer>> shuffledData;
 
     protected MapReduceServer() throws RemoteException {
         super();
         datas = new ArrayList<String>();
         mappedData = new ArrayList<DataPair<String, Integer>>();
-        shuffledData = new HashMap<String,List<Integer>>();
+        shuffledData = new TreeMap<String,List<Integer>>();
     }
 
     @Override
@@ -50,17 +50,21 @@ public class MapReduceServer extends UnicastRemoteObject implements MapReduce {
     	mappedData = getData().parallelStream()
                 .flatMap(d -> mapper.apply(d).stream())
                 .collect(Collectors.toList());
+    	datas.clear();
+    	System.out.println("mapped to " + mappedData.size());
     }
 
     @Override
     public void doShuffle() {
-    	shuffledData = new HashMap<>();
+    	shuffledData = new TreeMap<String,List<Integer>>();
 
         for(DataPair<String, Integer> p: mappedData) {
             List<Integer> l = shuffledData.getOrDefault(p.getKey(), new ArrayList<>());
             l.add(p.getValue());
             shuffledData.put(p.getKey(), l);
         }
+    	System.out.println("shuffle to " + shuffledData.size());
+        mappedData.clear();
     }
 
     @Override
@@ -73,7 +77,8 @@ public class MapReduceServer extends UnicastRemoteObject implements MapReduce {
                         }
                      return new DataPair<>(e.getKey(), result);
                         }).collect(Collectors.toList());
-
+    	System.out.println("reduce to " + mappedData.size());
+    	shuffledData.clear();
     }
 
 	@Override
@@ -95,6 +100,17 @@ public class MapReduceServer extends UnicastRemoteObject implements MapReduce {
 	public void setMappedData(List<DataPair<String, Integer>> mappedData) throws RemoteException {
 		this.mappedData = mappedData;
 	}
+	
+
+	@Override
+	public SortedMap<String,List<Integer>> getShuffledData() {
+		return shuffledData;
+	}
+
+	@Override
+	public void setShuffledData(SortedMap<String,List<Integer>> shuffledData) throws RemoteException {
+		this.shuffledData = shuffledData;
+	}
 
 	@Override
 	public void clearAll() throws RemoteException {
@@ -102,7 +118,7 @@ public class MapReduceServer extends UnicastRemoteObject implements MapReduce {
 			this.datas.clear();
 		}
 		if (this.shuffledData != null) {
-			this.shuffledData.clear();
+			shuffledData.clear();
 		}
 		if (this.mappedData != null) {
 			this.mappedData.clear();

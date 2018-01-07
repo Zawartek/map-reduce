@@ -6,8 +6,10 @@ import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.SortedMap;
 import java.util.concurrent.ConcurrentSkipListMap;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
@@ -230,7 +232,7 @@ public class FTMapReduceServer extends UnicastRemoteObject implements FTMapReduc
 	        	start = cpt*datas.size()/replicas.size();
 	        	end = (cpt+1)*datas.size()/replicas.size();
                 try {
-                	replica.getValue().setData(datas.subList(start, end));
+                	replica.getValue().setData(new ArrayList<>(datas.subList(start, end)));
 				} catch (RemoteException e) {
 					e.printStackTrace();
 				}
@@ -272,7 +274,52 @@ public class FTMapReduceServer extends UnicastRemoteObject implements FTMapReduc
     									int start, int end) {
     	Future f = pool.submit(() -> {
             try {
-            	replica.getValue().setMappedData(getMappedData().subList(start, end));
+            	replica.getValue().setMappedData(new ArrayList<>(getMappedData().subList(start, end)));
+			} catch (RemoteException e) {
+				e.printStackTrace();
+			}
+        });
+    	return f;
+    }
+
+    private void replicateShuffledData() throws RemoteException {
+        List<String> replicateData = null;
+        String start="", end="";
+        Iterator<String> keySet = getShuffledData().keySet().iterator();
+        List<Future> ftList = new ArrayList<>();
+        for(Map.Entry<String, FTMapReduce> replica : replicas.entrySet()) {
+
+            if(!serverName.equals(replica.getKey())) {
+	        	start = keySet.next();
+	        	end = start;
+	        	for(int cpt=0;cpt<getShuffledData().size()/replicas.size() && keySet.hasNext();++cpt) {
+	        		end = keySet.next();
+	        	}
+            	Future f = doReplicateShuffledData(replica, start, end);
+
+                ftList.add(f);
+            }
+        }
+
+        // Wait for each task to end.
+        for(Future f: ftList) {
+            try {
+                f.get(30, TimeUnit.SECONDS);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            } catch (ExecutionException e) {
+                e.printStackTrace();
+            } catch (TimeoutException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+    
+    private Future doReplicateShuffledData(Map.Entry<String, FTMapReduce> replica,
+    									String start, String end) {
+    	Future f = pool.submit(() -> {
+            try {
+            	replica.getValue().setShuffledData(getShuffledData().subMap(start, end));
 			} catch (RemoteException e) {
 				e.printStackTrace();
 			}
@@ -289,6 +336,7 @@ public class FTMapReduceServer extends UnicastRemoteObject implements FTMapReduc
                 Future f = pool.submit(() -> {
                     try {
                     	getMappedData().addAll(replica.getValue().getMappedData());
+                    	replica.getValue().clearAll();
 					} catch (RemoteException e) {
 						e.printStackTrace();
 					}
@@ -359,9 +407,9 @@ public class FTMapReduceServer extends UnicastRemoteObject implements FTMapReduc
 	@Override
 	public void doShuffle() throws RemoteException {
 		if (isLeader) {
-			setMappedData(getAllMappedData());
+			delegate.setMappedData(getAllMappedData());
 			delegate.doShuffle();
-			replicateMappedData();
+			replicateShuffledData();
 		}
 	}
 	@Override
@@ -405,12 +453,20 @@ public class FTMapReduceServer extends UnicastRemoteObject implements FTMapReduc
 	public List<DataPair<String, Integer>> getAllMappedData() throws RemoteException {
         if(isLeader) {
             replicateGetMappedData();
-            System.out.println(getMappedData());
         }
         return getMappedData();
 	}
 	@Override
 	public void clearAll() throws RemoteException {
 		delegate.clearAll();
+	}
+	@Override
+	public void setShuffledData(SortedMap<String, List<Integer>> shuffledData) throws RemoteException {
+		delegate.setShuffledData(shuffledData);
+		
+	}
+	@Override
+	public SortedMap<String, List<Integer>> getShuffledData() throws RemoteException {
+		return delegate.getShuffledData();
 	}
 }

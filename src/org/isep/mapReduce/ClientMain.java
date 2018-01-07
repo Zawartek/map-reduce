@@ -3,6 +3,7 @@ package org.isep.mapReduce;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.InvalidPathException;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
@@ -29,8 +30,10 @@ public class ClientMain {
         try {
             List<String> lines  = Files.readAllLines(new File(path).toPath());
             data.addAll(lines);
+        } catch (InvalidPathException e) {
+        	System.out.println("Error with the path of the file: " + path);
         } catch (Exception e) {
-            e.printStackTrace();
+        	System.out.println("Error with file: " + path);
         }
     }
 
@@ -86,6 +89,7 @@ public class ClientMain {
         }
         //printing results
         System.out.println("print result");
+        System.out.println(resultMain.size());
         resultMain.forEach(d -> System.out.println(d.getKey() +";" + d.getValue()));
     }
 

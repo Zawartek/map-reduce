@@ -3,7 +3,7 @@ package org.isep.mapReduce;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 import java.util.List;
-import java.util.Map;
+import java.util.SortedMap;
 import java.util.function.BiFunction;
 import java.util.function.Function;
 
@@ -21,4 +21,6 @@ public interface MapReduce extends Remote {
 	List<DataPair<String, Integer>> getMappedData() throws RemoteException;
 	public void setMappedData(List<DataPair<String, Integer>> mappedData) throws RemoteException;
 	public void clearAll() throws RemoteException;
+	void setShuffledData(SortedMap<String, List<Integer>> shuffledData) throws RemoteException;
+	SortedMap<String, List<Integer>> getShuffledData() throws RemoteException;
 }
