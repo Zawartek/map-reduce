@@ -57,6 +57,8 @@ public class ClientMain {
         loadFile(args[2], flist);
 
         List<String> data = new ArrayList<>();
+        Date before, after;
+        before = new Date(System.currentTimeMillis());
         List<DataPair<String,Integer>> resultMain = new ArrayList<>();
         List<DataPair<String,Integer>> resultTemp;
         int count = 0;
@@ -90,8 +92,10 @@ public class ClientMain {
             }
         }
         //printing results
-        System.out.println("print " + resultMain.size() + " results");
+        after = new Date(System.currentTimeMillis());
         resultMain.forEach(d -> System.out.println(d.getKey() +";" + d.getValue()));
+        System.out.println("print " + resultMain.size() + " results");
+        System.out.println("Before: "+before + " - after: " + after);
     }
 
     public static void connection(String address, int port) {

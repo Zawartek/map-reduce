@@ -33,8 +33,8 @@ public interface FTMapReduce extends Remote, MapReduce {
      * @throws RemoteException
      */
     void registerReplica(String server, FTMapReduce replica) throws RemoteException;
-
+    
 	void setData(List<String> data) throws RemoteException;
-
+	
 	List<DataPair<String, Integer>> getAllMappedData() throws RemoteException;
 }

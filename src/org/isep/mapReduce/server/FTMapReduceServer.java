@@ -112,7 +112,6 @@ public class FTMapReduceServer extends UnicastRemoteObject implements FTMapReduc
                 if(!replicas.containsKey(nb)) {
                     connectToReplica(nb);
                 }
-
             }
         }
     }
@@ -164,6 +163,7 @@ public class FTMapReduceServer extends UnicastRemoteObject implements FTMapReduc
         List<Future> ftList = new ArrayList<>();
         for(Map.Entry<String, FTMapReduce> replica : replicas.entrySet()) {
 
+            System.out.println("Replicate map call");
             if(!serverName.equals(replica.getKey())) {
                 Future f = pool.submit(() -> {
                     try {
@@ -193,6 +193,8 @@ public class FTMapReduceServer extends UnicastRemoteObject implements FTMapReduc
 
     private void replicateReduce(Integer identity) {
         List<Future> ftList = new ArrayList<>();
+
+        System.out.println("Replicate reduce call");
         for(Map.Entry<String, FTMapReduce> replica : replicas.entrySet()) {
 
             if(!serverName.equals(replica.getKey())) {
@@ -226,6 +228,7 @@ public class FTMapReduceServer extends UnicastRemoteObject implements FTMapReduc
     private void replicateData(List<String> datas) {
         List<String> replicateData = null;
         int cpt = 0, start=0, end=0;
+        System.out.println("Replicate initial data");
         for(Map.Entry<String, FTMapReduce> replica : replicas.entrySet()) {
         	
             if(!serverName.equals(replica.getKey())) {
@@ -248,6 +251,7 @@ public class FTMapReduceServer extends UnicastRemoteObject implements FTMapReduc
         List<String> replicateData = null;
         int cpt = 0, start=0, end=0;
         List<Future> ftList = new ArrayList<>();
+        System.out.println("Replicate mapped data");
         for(Map.Entry<String, FTMapReduce> replica : replicas.entrySet()) {
 
             if(!serverName.equals(replica.getKey())) {
@@ -391,10 +395,6 @@ public class FTMapReduceServer extends UnicastRemoteObject implements FTMapReduc
     public void registerReplica(String server, FTMapReduce replica) throws RemoteException {
         replicas.put(server,replica);
         //System.out.println("Registered " + server);
-        // If it is leader, registers back to the replica
-        /**if(isLeader) {
-            replica.registerReplica(serverName,this);
-        }*/
     }
 
     public void startPing() {
@@ -410,7 +410,7 @@ public class FTMapReduceServer extends UnicastRemoteObject implements FTMapReduc
 	}
 	@Override
 	public void doMap() throws RemoteException {
-        if(isLeader) {
+        if(isLeader && replicas.size()>1) {
             replicateMapping();
         }
         else {
@@ -419,7 +419,7 @@ public class FTMapReduceServer extends UnicastRemoteObject implements FTMapReduc
 	}
 	@Override
 	public void doShuffle() throws RemoteException {
-		if (isLeader) {
+		if (isLeader && replicas.size()>1) {
 			delegate.setMappedData(getAllMappedData());
 			delegate.doShuffle();
 			replicateShuffledData();
@@ -430,7 +430,7 @@ public class FTMapReduceServer extends UnicastRemoteObject implements FTMapReduc
 	}
 	@Override
 	public void doReduce(Integer identity) throws RemoteException {
-        if(isLeader) {
+        if(isLeader && replicas.size()>1) {
             replicateReduce(identity);
         }
         else {
@@ -439,7 +439,7 @@ public class FTMapReduceServer extends UnicastRemoteObject implements FTMapReduc
 	}
 	@Override
 	public void setData(List<String> data) throws RemoteException {
-        if(isLeader) {
+        if(isLeader &&  replicas.size()>1) {
             replicateData(data);
         }
         else {
@@ -456,7 +456,7 @@ public class FTMapReduceServer extends UnicastRemoteObject implements FTMapReduc
 	}
 	@Override
 	public void setMappedData(List<DataPair<String, Integer>> mappedData) throws RemoteException {
-        if(isLeader) {
+        if(isLeader && replicas.size()>1) {
         	delegate.setMappedData(mappedData);
             replicateMappedData();
         }
@@ -467,7 +467,7 @@ public class FTMapReduceServer extends UnicastRemoteObject implements FTMapReduc
 
 	@Override
 	public List<DataPair<String, Integer>> getAllMappedData() throws RemoteException {
-        if(isLeader) {
+        if(isLeader && replicas.size()>1) {
             replicateGetMappedData();
         }
         return getMappedData();

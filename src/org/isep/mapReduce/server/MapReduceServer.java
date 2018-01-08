@@ -4,7 +4,6 @@ import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 import java.util.SortedMap;
 import java.util.TreeMap;
 import java.util.function.BiFunction;
@@ -47,6 +46,7 @@ public class MapReduceServer extends UnicastRemoteObject implements MapReduce {
 
     @Override
     public void doMap() {
+    	System.out.println("Start Mapping");
     	mappedData = getData().parallelStream()
                 .flatMap(d -> mapper.apply(d).stream())
                 .collect(Collectors.toList());
@@ -56,6 +56,7 @@ public class MapReduceServer extends UnicastRemoteObject implements MapReduce {
 
     @Override
     public void doShuffle() {
+    	System.out.println("Start Shuffling");
     	shuffledData = new TreeMap<String,List<Integer>>();
 
         for(DataPair<String, Integer> p: mappedData) {
@@ -69,6 +70,7 @@ public class MapReduceServer extends UnicastRemoteObject implements MapReduce {
 
     @Override
     public void doReduce(Integer identity) {
+    	System.out.println("Start Reducing");
     	mappedData = shuffledData.entrySet().parallelStream()
                 .map(e -> {
                 	Integer result =identity;
